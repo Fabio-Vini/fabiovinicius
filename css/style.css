@@ -220,7 +220,7 @@ a{
 .tx-card img{
     height: 50px;
     width: 50px;
-    margin: 0px 0px 10px 115px;
+    margin: 0px 0px 10px 90px;
     position: relative;
 }
 
@@ -231,7 +231,7 @@ a{
 }
 
 .tx-card h2{
-    margin-left: 15px;
+    margin-left: -15px;
     color: #fff;
     text-align: center;
     font-family: Georgia, serif;
@@ -239,7 +239,7 @@ a{
 
 .tx-card p{
     width: 200px;
-    margin: 10px 0px 0px 65px;
+    margin: 10px 0px 0px 45px;
     color: #aecde0;
     font-family:'DejaVu Sans Mono, monospace';
 }
@@ -248,7 +248,7 @@ a{
     top: 25px;
     height: 40px;
     width: 130px;
-    margin: 0px 0px 0px 70px;
+    margin: 0px 0px 0px 50px;
     position: relative;
     color: #fff;
     background-color: #0583F2;
