@@ -265,17 +265,58 @@ a{
     margin: 0px 0px 0px 50px;
     position: relative;
     color: #fff;
-    background-color: #0583F2;
+    background-color: #191919;
     letter-spacing: 0px;
     font-family: monospace;
     font-size: 0.98rem;
     border: none;
     cursor: pointer;
     border-radius: 13px 13px 13px 13px;
+    z-index: 9;
+
+
+&::before{
+    transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    content: '';
+    width: 3%;
+    height: 100%;
+    background: #0583F2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 13px 13px 13px 13px;
 }
 
-.tx-card button:hover{
-    background-color: #191919;
+& .tx-card button{
+    color: white;
+    mix-blend-mode: difference;
+}
+&:hover{
+    &::before{
+        background-color: #0583F2;
+        width: 100%;
+    }
+}
+&.rounded{
+    border-radius: 13px 13px 13px 13px;
+    & .text-green{
+        color:#00F0B5;
+        mix-blend-mode: difference;
+    }
+    
+    &::before{
+        border-radius: 13px 13px 13px 13px;
+        width: 25%;
+        background: #00F0B5;
+    }
+    &:hover{
+        &::before{
+        background-color: #00F0B5;
+            width: 100%;
+        }
+    }	
+}
 }
 
 .habilidades{
