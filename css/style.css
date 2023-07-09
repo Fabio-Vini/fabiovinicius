@@ -16,7 +16,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
 }
   
 body{
@@ -98,6 +97,7 @@ a{
     position: absolute;
     color: #fff;
     font-family: Georgia, serif;
+    animation: animatedText 1s ease-in-out forwards;
 }
   
 .meu-nome h1{
@@ -128,14 +128,20 @@ a{
     width: 500px;
     position: relative;
     color: #fff;
-    background-color: #0583F2;
+    background-image: linear-gradient(to right,
+                                     rgb(18, 194, 233), 
+                                     rgb(22, 116, 193), 
+                                     rgb(37, 92, 243));
     font-family: Georgia, serif;
     font-size: 1.5rem;
     letter-spacing: 1px;
     border: none;
     cursor: pointer;
-    /* box-shadow: 5px 5px 29px #0583F2; */
     border-radius: 27px 27px 27px 27px;
+}
+
+.btn-siga:hover{
+    animation: glow 2.5s linear infinite;
 }
 
 .foto-fundo img{
@@ -147,7 +153,15 @@ a{
     height: 140vh;
     width: 100%;
     background-color: #191919;
-}
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1.5s, opacity 1.5s;
+  }
+
+  .sobre-mim.animate {
+    transform: translateX(0);
+    opacity: 1;
+  }
 
 .minha-foto{
     height: 500px;
@@ -257,8 +271,11 @@ a{
     font-size: 0.98rem;
     border: none;
     cursor: pointer;
-    box-shadow: 5px 5px 29px #0583F2;
     border-radius: 13px 13px 13px 13px;
+}
+
+.tx-card button:hover{
+    background-color: #191919;
 }
 
 .habilidades{
@@ -383,9 +400,35 @@ footer p{
     background-color: #191919;
     box-shadow: 0 5px 15px -5px #0583F2;
     margin: 10px;
-    border-radius: 50%;
+    border-radius: 20px;
     overflow: hidden;
     position: relative;
+    transition: width 0.7s ease;
+}
+
+.redes-sociais .btn:hover{
+    width: 175px;
+    justify-content: space-around;
+    background-color: #fff;
+}
+
+.icon-txt{
+    position: relative;
+    top: 3px;
+}
+
+.redes-sociais .btn .icon-txt{
+    width: 0;
+    overflow: hidden;
+    color: #191919;
+    font-family: fantasy;
+    font-size: 1em;
+}
+
+.redes-sociais .btn:hover .icon-txt{
+    width: fit-content;
+    transition: width 1s ease;
+    color: #0583F2;
 }
 
 .redes-sociais .btn img{
@@ -394,58 +437,19 @@ footer p{
     line-height: 90px;
     font-size: 26px;
     transition: 0.3s ease-in-out;
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 38px;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.redes-sociais .btn::before{
-    content: "";
-    position: absolute;
-    width: 120%;
-    height: 120%;
-    background: #fff;
-    transform: rotate(45deg);
-    left: -110%;
-    top: 105%;
-}
-
-.redes-sociais .btn:hover img{
-    color: #fff;
-    transform: scale(1);
-    top: 20px;
-}
-
-.redes-sociais .btn:hover::before{
-    animation: onMover 0.7s 1;
-    left: -10%;
-    top: -105;
-}
-
-@keyframes onMover{
-    0%{
-        left: -110%;
-        top: 90%;
-    }
-
-    50%{
-        left: 10%;
-        top: -30%;
-    }
-
-    100%{
-        top: -10%;
-        left: -10%;
-    }
-}
+} 
 
 footer h6{
     color: #0583F2;
     position: relative;
     top: 50%;
     font-size: 0.7rem;
-}
+} 
+
 
 
   /* RESPONSIVIDADE */
@@ -586,12 +590,60 @@ footer h6{
         margin: 0;
         left: -5%;
     }
+
+    .redes-sociais .btn{
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        background-color: #191919;
+        box-shadow: 0 5px 15px -5px #0583F2;
+        margin: 10px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .redes-sociais .btn img{
+        position: relative;
+        z-index: 4;
+        line-height: 90px;
+        font-size: 26px;
+        transition: 0.3s ease-in-out;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .redes-sociais .btn::before{
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background: #fff;
+        transform: rotate(45deg);
+        left: -110%;
+        top: 105%;
+    }
+    
+    .redes-sociais .btn:hover img{
+        color: #fff;
+        transform: scale(1);
+        top: 20px;
+    }
+    
+    .redes-sociais .btn:hover::before{
+        animation: onMover 0.7s 1;
+        left: -10%;
+        top: -105;
+    }
+
+    .icon-txt, .icon-bg{
+        display: none;
+    }
 }
   
   @media (max-width: 604px) {
-    /* *{
-        border: 1px solid red;
-    } */
     .menu {
       display: grid;
       position: absolute;
@@ -726,4 +778,94 @@ footer h6{
         margin: 0;
         left: -5%;
     }
+
+    .redes-sociais .btn{
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        background-color: #191919;
+        box-shadow: 0 5px 15px -5px #0583F2;
+        margin: 10px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .redes-sociais .btn img{
+        position: relative;
+        z-index: 4;
+        line-height: 90px;
+        font-size: 26px;
+        transition: 0.3s ease-in-out;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .redes-sociais .btn::before{
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background: #fff;
+        transform: rotate(45deg);
+        left: -110%;
+        top: 105%;
+    }
+    
+    .redes-sociais .btn:hover img{
+        color: #fff;
+        transform: scale(1);
+        top: 20px;
+    }
+    
+    .redes-sociais .btn:hover::before{
+        animation: onMover 0.7s 1;
+        left: -10%;
+        top: -105;
+    }
+
+    .icon-txt, .icon-bg{
+        display: none;
+    }
 }
+
+
+/* ANIMAÇÃO DA DIV ".meu-nome" */
+@keyframes animatedText {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ANIMAÇÃO DO BOTÃO ".btn-siga" */
+  @keyframes glow {
+    0%{box-shadow: 5px 5px 20px rgb(18, 194, 233),-5px -5px 20px rgb(18, 194, 233);}
+    50%{box-shadow: 5px 5px 20px rgb(22, 116, 193),-5px -5px 20px rgb(22, 116, 193);}
+    100%{box-shadow: 5px 5px 20px rgb(37, 92, 243),-5px -5px 20px rgb(37, 92, 243);}
+}
+
+/* ANIMAÇÃO DO MENU RESPONSIVO */
+@keyframes onMover{
+    0%{
+        left: -110%;
+        top: 90%;
+    }
+
+    50%{
+        left: 10%;
+        top: -30%;
+    }
+
+    100%{
+        top: -10%;
+        left: -10%;
+    }
+} 
+
