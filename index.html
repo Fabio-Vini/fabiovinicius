@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" minimum-scale=1.0, maximum-scale=1.0, user-scalable=no>
     <link rel="shortcut icon" href="icones/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/menu-burger.js"></script>
+    <script defer src="js/motor.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>Meu Portifólio</title>
 </head>
+
 <body>
   <span id="topo"></span>
     <header class="header">
@@ -28,25 +29,25 @@
           <ul class="menu" id="menu" role="menu">
             <li><a href="#topo">Início</a></li>
             <li><a href="#gh">Sobre mim</a></li>
-            <li><a href="mailto:fabinicius10@gmail.com">Contato</a></li>
+            <li><a href="mailto:fbdublack17@gmail.com">Contato</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
-            <li class="siga"><a href="https://www.linkedin.com/in/f%C3%A1bio-vin%C3%ADcius-santos-de-freitas-299505227?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFML0PYVnRx6%2Fsj%2BhkOqN3g%3D%3D">Linkedin</a></li>
+            <li class="siga"><a href="https://www.linkedin.com/in/f%C3%A1bio-vin%C3%ADcius-santos-de-freitas-299505227?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFML0PYVnRx6%2Fsj%2BhkOqN3g%3D%3D">LinkedIn</a></li>
           </ul>
         </nav>
       </header>
 
     <main>
         <div class="foto-fundo">
-          <img src="img/fundo-header.png" alt="">
+          <img src="img/fundo-header.png" alt="Imagem de fundo (foto de um código)">
         </div>
 
        <div class="meu-nome">
         <h1>Olá, meu nome é</h1>
         <h2>Fábio</h2>
         <h2 class="nome">Vinícius</h2>
-        <h3>Eu sou um desenvolvedor Front End JR.</h3>
-        <button class="btn-siga"><a href="https://www.linkedin.com/in/f%C3%A1bio-vin%C3%ADcius-santos-de-freitas-299505227?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFML0PYVnRx6%2Fsj%2BhkOqN3g%3D%3D">Linkedin</a></button>
+        <h3>Eu sou um programador iniciante</h3>
+        <button class="btn-siga"><a href="https://www.linkedin.com/in/f%C3%A1bio-vin%C3%ADcius-santos-de-freitas-299505227?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFML0PYVnRx6%2Fsj%2BhkOqN3g%3D%3D">LinkedIn</a></button>
        </div>
 
        <div class="sobre-mim">
@@ -55,7 +56,7 @@
 
           <span id="gh"></span>
           <h1>Sobre mim</h1>
-          <h2>Front End JR</h2>
+          <h2>Novice Developer</h2>
           <h2 class="t-2">& Estudante</h2>
           <p>Desenvolvedor de Software, sem experiência em empresas, mas atualmente formado em Desenvolvimento de Sistemas.
             Ingressei na área em 2021, reconheço-me como um apreciador de novas informações e inovações do mercado, com aprendizado obtido a cada dia, consequente dos estudos constantes.<br>
@@ -70,7 +71,7 @@
         <div class="container">
           <div class="hab projeto"  style="background-color: #191919; box-shadow: none;">
             <div class="tx-card">
-              <img src="icones/mapa-de-viagem.png" alt="">
+              <img src="icones/mapa-de-viagem.png" alt="Icone de um mapa">
               <h2 class="title-p">Site de Turismo</h2>
             <p class="pr">Desenvolvido em 2021</p>
             <button><a href="https://github.com/Fabio-Vini/Site-de-Turismo.git">Repositório</a></button>
@@ -79,7 +80,7 @@
   
           <div class="hab projeto" style="background-color: #191919; box-shadow: none;">
             <div class="tx-card">
-              <img src="icones/calculadora.png" alt="">
+              <img src="icones/calculadora.png" alt="Icone de uma calculadora">
               <h2 class="title-p">Calculadora</h2>
             <p class="pr">Desenvolvido em 2022</p>
             <button><a href="https://github.com/Fabio-Vini/Calculadora.git">Repositório</a></button>
@@ -88,7 +89,7 @@
           
           <div class="hab projeto"  style="background-color: #191919; box-shadow: none;">
             <div class="tx-card">
-              <img src="icones/em-progresso.png" alt="">
+              <img src="icones/em-progresso.png" alt="Icone de uma ampulheta">
               <h2 class="title-p" style="margin-left: 0px;">Carregando...</h2>
             <p class="pr">Projeto em andamento</p>
             <button><a href="#">Repositório</a></button>
@@ -127,7 +128,7 @@
        </div>
 
        <!-- Script com a animação dos cards -->
-    <script src="js/vanilla-tilt.js"></script>
+    <!-- <script src="js/vanilla-tilt.js"></script>
     <script>
      VanillaTilt.init(document.querySelectorAll(".projeto"), {
       max: 5,
@@ -141,29 +142,34 @@
       speed: 400,
       "max-glare": 1,
      });
-    </script>
+    </script> -->
     </main>
 
     <footer>
       <h1>Fábio Vinícius</h1>
-      <p>Desenvolvido em <span style="color: #ff5722;">HTML5</span>, <span style="color: #2196f3;">CSS3</span> e <span style="color: #fed73c;">JS</span> - por favor clique nos botões abaixo e me siga:
+      <p>Desenvolvido em <span style="color: #ff5722;">HTML5</span>, <span style="color: #2196f3;">CSS3</span> e <span style="color: #fed73c;">JS</span> - Me envie mensagens ou me siga pelas redes sociais abaixo:
       </p>
 
       <div class="redes-sociais">
-        <a href="https://www.instagram.com/vz.fabinho/" class="btn">
+        <a href="https://www.instagram.com/binho_vn/" class="btn">
           <img src="icones/instagram.png" class="instagram"></img>
+          <span class="icon-txt">Instagram</span>
+          <span class="icon-bg"></span>
         </a>
-        <!-- <a href="#" class="btn">
+        <a href="#" class="btn">
           <img src="icones/discord.png" class="discord"></img>
-        </a> -->
-        <a href="https://github.com/Fabio-Vini" class="btn">
-          <img src="icones/github.png" class="github"></img>
+          <span class="icon-txt">Fabio Vini#5092</span>
+          <span class="icon-bg"></span>
+        </a>
+        <a href="https://github.com/Fabio-Vini" alt="Icone do GitHub" class="btn">
+          <img src="icones/github.png" alt="Icone do Instagram" class="github"></img>
+          <span class="icon-txt">GitHub</span>
+          <span class="icon-bg"></span>
         </a>
       </div>
 
       <h6>Copyright © 2023 - Todos os Direitos Reservados - Fabio Vinicius Santos de Freitas</h6>
     </footer>
 
-    
 </body>
 </html>
